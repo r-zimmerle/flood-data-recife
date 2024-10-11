@@ -28,6 +28,7 @@ O script `processar_dados.py` realiza o filtro dos chamados relacionados a alaga
 - Filtra as linhas que contêm palavras-chave relacionadas a alagamentos na coluna `solicitacao_descricao`.
 - Filtra os dados a partir de um ano específico (padrão: 2019).
 - Faz o merge com a planilha de tipos de ocorrências para validar os alagamentos confirmados.
+- Remove duplicatas com base na coluna `processo_numero` para garantir que cada chamado seja único.
 - Gera o arquivo `alagamentos_confirmados.csv` na pasta `/output`.
 
 ### 3. Geocodificação
@@ -72,7 +73,7 @@ pip install -r requirements.txt
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/r-zimmerle/flood-data-recife
 cd seu-repositorio
 ```
 2. Coloque os dados na pasta /data:
@@ -107,4 +108,9 @@ pip install -r requirements.txt
 2. Certifique-se de estar ciente dos termos de uso da API.
 3. Tratamento de Erros: O script de geocodificação inclui tratamento de exceções para lidar com possíveis erros durante a obtenção das coordenadas.
 4. Contribuições: Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+## Licença e Dados
+
+- **Licença do Código:** Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para mais detalhes.
+- **Licença dos Dados:** Os dados utilizados neste projeto são provenientes do portal de dados abertos da Prefeitura do Recife. Verifique os termos de uso [aqui](http://dados.recife.pe.gov.br/pages/terms/).
 

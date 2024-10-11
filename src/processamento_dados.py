@@ -12,6 +12,9 @@ pattern = '|'.join(keywords)
 # Filtrar as linhas que contenham qualquer uma das palavras-chave e que sejam a partir do ano de 2019
 filtered_df = df[(df['solicitacao_descricao'].str.contains(pattern, case=False, na=False)) & (df['ano'] >= 2019)]
 
+# Remover duplicatas com base na coluna 'processo_numero'
+filtered_df = filtered_df.drop_duplicates(subset='processo_numero')
+
 # Carregar a planilha de validação
 df_validation = pd.read_csv('data/tipo-ocorrencia.csv')
 
