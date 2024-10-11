@@ -74,7 +74,7 @@ pip install -r requirements.txt
 1. Clone o repositório:
 ```bash
 git clone https://github.com/r-zimmerle/flood-data-recife
-cd seu-repositorio
+cd flood-data-recife
 ```
 2. Coloque os dados na pasta /data:
 Baixe os arquivos CSV mencionados na seção de Coleta de Dados.
